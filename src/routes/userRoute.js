@@ -66,6 +66,7 @@ userRouter.get('/feed', userAuth, async (req, res) => {
     console.log("inside feed api");
     const page = parseInt(req.query.page, 10) || 0; // Ensure proper numeric conversion
     const limits = parseInt(req.query.limits, 10) || 10; // Default limit is 10
+    
     const userId = user._id;
 
     if (!userId) {
